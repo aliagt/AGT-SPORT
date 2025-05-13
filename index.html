@@ -1,188 +1,139 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AGT SPORT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
     }
-    .footer {
-      background-color: #f9f9f9;
-      padding: 40px 20px 20px 20px;
+
+    header {
+      background-color: #00bfff;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      padding: 2rem 1rem;
       text-align: center;
       position: relative;
     }
-    .footer img.logo {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-    .footer h2 {
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 20px;
-    }
+
     .social-icons {
-      margin-bottom: 20px;
+      margin-top: 1rem;
     }
+
     .social-icons a {
-      display: inline-block;
       margin: 0 10px;
+      color: #00bfff;
+      font-size: 1.5rem;
+      text-decoration: none;
     }
-    .social-icons img {
-      width: 30px;
-      height: 30px;
+
+    .footer-logo {
+      width: 100px;
+      margin: 0 auto 1rem;
+      display: block;
     }
-    .contact-toggle {
+
+    .contact-button {
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
       cursor: pointer;
-      color: #007BFF;
-      text-decoration: underline;
-      font-size: 16px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
     }
+
     .contact-form {
       display: none;
-      margin-top: 20px;
+      margin-top: 1rem;
     }
-    .contact-form form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
+
     .contact-form input,
     .contact-form textarea {
       width: 100%;
       padding: 10px;
       margin: 5px 0;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 5px;
     }
+
     .contact-form button {
-      background-color: #007BFF;
-      color: #fff;
-      padding: 10px 20px;
+      background-color: #00bfff;
+      color: white;
       border: none;
-      border-radius: 5px;
+      padding: 10px 20px;
       cursor: pointer;
+      border-radius: 5px;
     }
-    .footer-note {
-      margin-top: 30px;
-      color: #999;
-      font-size: 14px;
+
+    .copyright {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
+
 <body>
+  <header>
+    AGT SPORT
+  </header>
 
-  <footer class="footer">
-    <img src="logo.png" alt="AGT SPORT Logo" class="logo">
-    <h2>تابعونا على مواقع التواصل الاجتماعي</h2>
+  <div class="content">
+    <p>مرحبًا بكم في موقع AGT SPORT الرسمي لأخبار ولقطات كرة القدم.</p>
+  </div>
+
+  <footer>
+    <img src="logo.png" alt="AGT SPORT Logo" class="footer-logo" />
+
+    <h3>تابعونا على مواقع التواصل الاجتماعي</h3>
     <div class="social-icons">
-      <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-      </a>
-      <a href="https://t.me/kdbamp" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-      </a>
-      <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-      </a>
+      <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/kdbamp" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <div class="contact-toggle" onclick="document.querySelector('.contact-form').style.display='block'">
-      اتصل بنا
-    </div>
-
-    <div class="contact-form">
+    <button class="contact-button" onclick="toggleForm()">اتصل بنا</button>
+    <div class="contact-form" id="contactForm">
       <form action="https://formspree.io/f/xgvkpavn" method="POST">
-        <input type="text" name="name" placeholder="الاسم" required>
-        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-        <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <input type="text" name="name" placeholder="الاسم الكامل" required />
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+        <textarea name="message" placeholder="رسالتك" rows="4" required></textarea>
         <button type="submit">إرسال</button>
       </form>
     </div>
 
-    <div class="footer-note">
+    <div class="copyright">
       &copy; 2025 AGT SPORT. جميع الحقوق محفوظة.
-    </div> <!-- Footer Start -->
-<footer style="background-color: #ffffff; padding: 40px 20px; text-align: center;">
-  <img src="logo.png" alt="AGT SPORT Logo" style="width: 100px; margin-bottom: 20px;">
-  <h3 style="color: #000000; font-size: 18px; margin-bottom: 15px;">تابعونا على مواقع التواصل</h3>
-  <div style="margin-bottom: 25px;">
-    <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="24" height="24">
-    </a>
-    <a href="https://t.me/kdbamp" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="24" height="24">
-    </a>
-    <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24" height="24">
-    </a>
-  </div>
+    </div>
+  </footer>
 
-  <!-- Contact Us -->
-  <button onclick="document.getElementById('contact-form').style.display='block'" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    اتصل بنا
-  </button>
-
-  <div id="contact-form" style="display: none; margin-top: 20px;">
-    <form action="https://formspree.io/f/xgvkpavn" method="POST" style="max-width: 400px; margin: 0 auto;">
-      <input type="text" name="name" placeholder="الاسم" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-      <input type="email" name="email" placeholder="البريد الإلكتروني" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-      <textarea name="message" placeholder="رسالتك" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
-      <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-        إرسال
-      </button>
-    </form>
-  </div>
-
-  <p style="margin-top: 30px; color: #888888; font-size: 14px;">&copy; 2025 AGT SPORT - جميع الحقوق محفوظة</p>
-</footer>
-<!-- Footer End -->
-
-  </footer> <footer style="background-color: #ffffff; padding: 40px 20px; text-align: center; font-family: Arial, sans-serif;">
-  <!-- Logo -->
-  <div style="margin-bottom: 20px;">
-    <img src="logo.png" alt="AGT SPORT Logo" style="height: 80px;">
-  </div>
-
-  <!-- Social Media -->
-  <h3 style="color: #333; margin-bottom: 10px;">تابعونا على مواقع التواصل</h3>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
-    <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram" style="height: 30px;">
-    </a>
-    <a href="https://t.me/kdbamp" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/telegram-app.png" alt="Telegram" style="height: 30px;">
-    </a>
-    <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube" style="height: 30px;">
-    </a>
-  </div>
-
-  <!-- Contact Us Toggle -->
-  <button onclick="document.getElementById('contact-form').style.display='block'" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">اتصل بنا</button>
-
-  <!-- Hidden Contact Form -->
-  <div id="contact-form" style="display: none; margin-top: 20px;">
-    <form action="https://formspree.io/f/xgvkpavn" method="POST" style="max-width: 500px; margin: auto;">
-      <input type="text" name="name" placeholder="الاسم" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
-      <input type="email" name="email" placeholder="البريد الإلكتروني" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
-      <textarea name="message" placeholder="رسالتك" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-      <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">إرسال</button>
-    </form>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div style="margin-top: 30px; color: #888; font-size: 14px;">
-    &copy; 2025 AGT SPORT - جميع الحقوق محفوظة.
-  </div>
-</footer>
-
-  
-
+  <script>
+    function toggleForm() {
+      const form = document.getElementById('contactForm');
+      form.style.display = form.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
-</html>
 
+</html>
