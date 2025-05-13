@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGT SPORT | AS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      color: #01579b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .lang-switch button {
+      background-color: #01579b;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .lang-switch button:hover {
+      background-color: #0288d1;
+    }
+
+    .en-content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">أهلاً بكم في AGT SPORT</h1>
+  <p id="desc">كل ما يخص كرة القدم، الأخبار، اللقطات، وتحرير الفيديو</p>
+
+  <div class="lang-switch">
+    <button onclick="switchToArabic()">العربية</button>
+    <button onclick="switchToEnglish()">English</button>
+  </div>
+
+  <script>
+    function switchToEnglish() {
+      document.getElementById("title").innerText = "Welcome to AGT SPORT";
+      document.getElementById("desc").innerText = "Football news, clips, and video editing";
+      document.body.setAttribute("dir", "ltr");
+    }
+
+    function switchToArabic() {
+      document.getElementById("title").innerText = "أهلاً بكم في AGT SPORT";
+      document.getElementById("desc").innerText = "كل ما يخص كرة القدم، الأخبار، اللقطات، وتحرير الفيديو";
+      document.body.setAttribute("dir", "rtl");
+    }
+  </script>
+</body>
+</html>
