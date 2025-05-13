@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | AGT SPORT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      color: #01579b;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .lang-switch button {
+      background-color: #01579b;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .lang-switch button:hover {
+      background-color: #0288d1;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">من نحن</h1>
+  <p id="content">
+    AGT SPORT هو موقع متخصص في تغطية كل ما يتعلق بكرة القدم من أخبار، لقطات حماسية، وتحرير فيديوهات مميزة. نسعى لتقديم محتوى رياضي احترافي باللغة العربية والإنجليزية لجمهورنا في كل أنحاء العالم.
+  </p>
+
+  <div class="lang-switch">
+    <button onclick="switchToArabic()">العربية</button>
+    <button onclick="switchToEnglish()">English</button>
+  </div>
+
+  <script>
+    function switchToEnglish() {
+      document.getElementById("title").innerText = "About Us";
+      document.getElementById("content").innerText = "AGT SPORT is a football-focused platform offering news, exciting clips, and professional video editing. We aim to deliver bilingual, high-quality content for football fans around the world.";
+      document.body.setAttribute("dir", "ltr");
+    }
+
+    function switchToArabic() {
+      document.getElementById("title").innerText = "من نحن";
+      document.getElementById("content").innerText = "AGT SPORT هو موقع متخصص في تغطية كل ما يتعلق بكرة القدم من أخبار، لقطات حماسية، وتحرير فيديوهات مميزة. نسعى لتقديم محتوى رياضي احترافي باللغة العربية والإنجليزية لجمهورنا في كل أنحاء العالم.";
+      document.body.setAttribute("dir", "rtl");
+    }
+  </script>
+</body>
+</html>
