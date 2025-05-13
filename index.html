@@ -2,77 +2,120 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
+  <title>AGT SPORT | الصفحة الرئيسية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AGT SPORT | AS</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
       background: linear-gradient(to bottom, #e0f7fa, #ffffff);
       color: #01579b;
+    }
+
+    header {
+      background-color: #01579b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0288d1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      gap: 1.5rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
       text-align: center;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
     }
 
     p {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
+      max-width: 600px;
+      margin: auto;
     }
 
     .lang-switch {
-      display: flex;
-      gap: 1rem;
+      margin-top: 1.5rem;
     }
 
     .lang-switch button {
       background-color: #01579b;
       color: white;
       border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      margin: 0 0.5rem;
     }
 
     .lang-switch button:hover {
-      background-color: #0288d1;
-    }
-
-    .en-content {
-      display: none;
+      background-color: #039be5;
     }
   </style>
 </head>
 <body>
-  <h1 id="title">أهلاً بكم في AGT SPORT</h1>
-  <p id="desc">كل ما يخص كرة القدم، الأخبار، اللقطات، وتحرير الفيديو</p>
+  <header>
+    <h1 id="site-title">موقع AGT SPORT</h1>
+  </header>
 
-  <div class="lang-switch">
-    <button onclick="switchToArabic()">العربية</button>
-    <button onclick="switchToEnglish()">English</button>
-  </div>
+  <nav>
+    <a href="index.html" id="home-link">الرئيسية</a>
+    <a href="videos.html" id="videos-link">فيديوهات</a>
+    <a href="contact.html" id="contact-link">تواصل معنا</a>
+  </nav>
+
+  <main>
+    <h2 id="welcome-title">أهلاً بكم في موقعنا الرياضي</h2>
+    <p id="welcome-text">نقدم لكم آخر أخبار كرة القدم، الفيديوهات المميزة، وتحليلات رياضية حصرية.</p>
+
+    <div class="lang-switch">
+      <button onclick="switchToArabic()">العربية</button>
+      <button onclick="switchToEnglish()">English</button>
+    </div>
+  </main>
 
   <script>
     function switchToEnglish() {
-      document.getElementById("title").innerText = "Welcome to AGT SPORT";
-      document.getElementById("desc").innerText = "Football news, clips, and video editing";
+      document.documentElement.lang = "en";
       document.body.setAttribute("dir", "ltr");
+      document.getElementById("site-title").innerText = "AGT SPORT Website";
+      document.getElementById("home-link").innerText = "Home";
+      document.getElementById("videos-link").innerText = "Videos";
+      document.getElementById("contact-link").innerText = "Contact";
+      document.getElementById("welcome-title").innerText = "Welcome to our Sports Website";
+      document.getElementById("welcome-text").innerText = "We bring you the latest football news, exclusive videos, and top analysis.";
     }
 
     function switchToArabic() {
-      document.getElementById("title").innerText = "أهلاً بكم في AGT SPORT";
-      document.getElementById("desc").innerText = "كل ما يخص كرة القدم، الأخبار، اللقطات، وتحرير الفيديو";
+      document.documentElement.lang = "ar";
       document.body.setAttribute("dir", "rtl");
+      document.getElementById("site-title").innerText = "موقع AGT SPORT";
+      document.getElementById("home-link").innerText = "الرئيسية";
+      document.getElementById("videos-link").innerText = "فيديوهات";
+      document.getElementById("contact-link").innerText = "تواصل معنا";
+      document.getElementById("welcome-title").innerText = "أهلاً بكم في موقعنا الرياضي";
+      document.getElementById("welcome-text").innerText = "نقدم لكم آخر أخبار كرة القدم، الفيديوهات المميزة، وتحليلات رياضية حصرية.";
     }
   </script>
 </body>
