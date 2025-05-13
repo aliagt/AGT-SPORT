@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديوهات | AGT SPORT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      color: #01579b;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    iframe {
+      width: 320px;
+      height: 180px;
+      border-radius: 10px;
+      border: 1px solid #0288d1;
+    }
+
+    .lang-switch {
+      margin-top: 1.5rem;
+    }
+
+    .lang-switch button {
+      background-color: #01579b;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0 0.5rem;
+    }
+
+    .lang-switch button:hover {
+      background-color: #0288d1;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">فيديوهات مختارة</h1>
+
+  <div class="video-container">
+    <!-- ضع هنا روابط YouTube أو فيديوهات أخرى -->
+    <iframe src="https://www.youtube.com/embed/Xc0gYtv7CkE" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  </div>
+
+  <div class="lang-switch">
+    <button onclick="switchToArabic()">العربية</button>
+    <button onclick="switchToEnglish()">English</button>
+  </div>
+
+  <script>
+    function switchToEnglish() {
+      document.getElementById("title").innerText = "Featured Videos";
+      document.body.setAttribute("dir", "ltr");
+    }
+
+    function switchToArabic() {
+      document.getElementById("title").innerText = "فيديوهات مختارة";
+      document.body.setAttribute("dir", "rtl");
+    }
+  </script>
+</body>
+</html>
