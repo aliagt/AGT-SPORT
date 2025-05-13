@@ -2,210 +2,121 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>AGT SPORT | الصفحة الرئيسية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGT SPORT | AS</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-      color: #01579b;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0faff;
+      color: #000;
     }
 
     header {
-      background-color: #01579b;
+      background-color: #00bfff;
       color: white;
-      padding: 1rem;
+      padding: 20px;
       text-align: center;
     }
 
-    nav {
-      background-color: #0288d1;
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .social {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
     }
 
-    nav a {
-      color: white;
+    .social a {
+      color: #0077cc;
+      font-size: 18px;
       text-decoration: none;
-      font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid #0077cc;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .lang-switch {
-      margin-top: 1.5rem;
-    }
-
-    .lang-switch button {
-      background-color: #01579b;
+    .social a:hover {
+      background-color: #0077cc;
       color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin: 0 0.5rem;
     }
 
-    .lang-switch button:hover {
-      background-color: #039be5;
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .videos iframe {
+      width: 350px;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #e6f7ff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    footer img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    footer h2 {
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
-</head>   <footer style="background-color: #0288d1; color: white; padding: 2rem 1rem; text-align: center; font-family: Arial, sans-serif;">
-    <h3 style="margin-bottom: 1rem;">تابعنا على مواقع التواصل</h3>
-    <div style="margin-bottom: 1rem;">
-      <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank" style="margin: 0 15px; display: inline-block;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" width="36" style="vertical-align: middle;">
-      </a>
-      <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank" style="margin: 0 15px; display: inline-block;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="36" style="vertical-align: middle;">
-      </a>
-      <a href="https://t.me/kdbamp" target="_blank" style="margin: 0 15px; display: inline-block;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="36" style="vertical-align: middle;">
-      </a>
-    </div>
-    <p style="font-size: 14px;">&copy; 2025 AGT SPORT (AS) | جميع الحقوق محفوظة</p>
-  </footer>
-<footer style="background-color: #f2f2f2; padding: 40px 20px; color: #000;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
-    
-    <!-- Logo -->
-    <div style="flex: 1; min-width: 250px;">
-     <img src="agt-logo.jpeg" alt="AGT SPORT Logo" style="width: 150px; margin-bottom: 10px;" />
-
-      <h2 style="font-weight: bold;">AS AGT SPORT</h2>
-    </div>
-
-    <!-- Social Media -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3>تابعنا على</h3>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank" style="color: #000;">📸 Instagram</a></li>
-        <li><a href="https://t.me/kdbamp" target="_blank" style="color: #000;">📢 Telegram</a></li>
-        <li><a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank" style="color: #000;">▶️ YouTube</a></li>
-      </ul>
-    </div>
-
-    <!-- YouTube Videos -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3>أحدث الفيديوهات</h3>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <iframe width="100%" height="150" src="https://www.youtube.com/embed/DLHmGj_DVPs" frameborder="0" allowfullscreen></iframe>
-        <iframe width="100%" height="150" src="https://www.youtube.com/embed/Cxj87v67AVM" frameborder="0" allowfullscreen></iframe>
-        <iframe width="100%" height="150" src="https://www.youtube.com/embed/R_Tf8zQSlTY" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Contact -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3>اتصل بنا</h3>
-      <p>📩 aliagtbusiness22@gmail.com</p>
-    </div>
-  </div>
-
-  <!-- Copyright -->
-  <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #777;">
-    © 2025 AGT SPORT. جميع الحقوق محفوظة.
-  </div>
-</footer>
-
+</head>
 <body>
+
   <header>
-    <h1 id="site-title">موقع AGT SPORT</h1>
+    <h1>AGT SPORT | AS</h1>
+    <p>Football News, Edits & More | أخبار كرة القدم، اللقطات وكل جديد</p>
   </header>
 
-  <nav>
-    <a href="index.html" id="home-link">الرئيسية</a>
-    <a href="videos.html" id="videos-link">فيديوهات</a>
-    <a href="contact.html" id="contact-link">تواصل معنا</a>
- <!-- مواقع التواصل الاجتماعي -->
-<section style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
-  <h2 style="color: #007BFF; font-size: 28px; margin-bottom: 20px;">تابعنا على مواقع التواصل الاجتماعي</h2>
-  
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank" style="text-decoration: none;">
-      <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
-    </a>
-
-    <!-- Telegram -->
-    <a href="https://t.me/kdbamp" target="_blank" style="text-decoration: none;">
-      <img src="https://img.icons8.com/fluency/48/telegram-app.png" alt="Telegram" />
-    </a>
-
-    <!-- YouTube -->
-    <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank" style="text-decoration: none;">
-      <img src="https://img.icons8.com/fluency/48/youtube-play.png" alt="YouTube" />
-    </a>
+  <div class="social">
+    <a href="https://www.instagram.com/kdb.amp17?igsh=MXNydXl1eXAydTY0Ng==" target="_blank">📸 Instagram</a>
+    <a href="https://t.me/kdbamp" target="_blank">📢 Telegram</a>
+    <a href="https://youtube.com/@kdbamedits?si=DGE1wm8jkmy6mNAr" target="_blank">▶️ YouTube</a>
   </div>
-</section>
 
-  </nav>
+  <div class="videos">
+    <iframe src="https://www.youtube.com/embed/DLHmGj_DVPs" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Cxj87v67AVM" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/R_Tf8zQSlTY" allowfullscreen></iframe>
+  </div>
 
-  <main>
-    <h2 id="welcome-title">أهلاً بكم في موقعنا الرياضي</h2>
-    <p id="welcome-text">نقدم لكم آخر أخبار كرة القدم، الفيديوهات المميزة، وتحليلات رياضية حصرية.</p>
+  <footer>
+    <img src="agt-logo.jpeg" alt="AGT SPORT Logo" />
+    <h2>تابعونا على مواقع التواصل الاجتماعي</h2>
+    <p><a href="mailto:aliagtbusiness22@gmail.com">📧 aliagtbusiness22@gmail.com</a></p>
+    <div class="contact">قسم اتصل بنا سيتم إضافته لاحقاً</div>
+    <p>© 2025 AGT SPORT. جميع الحقوق محفوظة.</p>
+  </footer>
 
-    <div class="lang-switch">
-      <button onclick="switchToArabic()">العربية</button>
-      <button onclick="switchToEnglish()">English</button>
-    </div>
-  </main>
-
-  <script>
-    function switchToEnglish() {
-      document.documentElement.lang = "en";
-      document.body.setAttribute("dir", "ltr");
-      document.getElementById("site-title").innerText = "AGT SPORT Website";
-      document.getElementById("home-link").innerText = "Home";
-      document.getElementById("videos-link").innerText = "Videos";
-      document.getElementById("contact-link").innerText = "Contact";
-      document.getElementById("welcome-title").innerText = "Welcome to our Sports Website";
-      document.getElementById("welcome-text").innerText = "We bring you the latest football news, exclusive videos, and top analysis.";
-    }
-
-    function switchToArabic() {
-      document.documentElement.lang = "ar";
-      document.body.setAttribute("dir", "rtl");
-      document.getElementById("site-title").innerText = "موقع AGT SPORT";
-      document.getElementById("home-link").innerText = "الرئيسية";
-      document.getElementById("videos-link").innerText = "فيديوهات";
-      document.getElementById("contact-link").innerText = "تواصل معنا";
-      document.getElementById("welcome-title").innerText = "أهلاً بكم في موقعنا الرياضي";
-      document.getElementById("welcome-text").innerText = "نقدم لكم آخر أخبار كرة القدم، الفيديوهات المميزة، وتحليلات رياضية حصرية.";
-    }
-  </script>
 </body>
 </html>
-<!-- فيديوهات يوتيوب -->
-<section style="background-color: #ffffff; padding: 40px 20px;">
-  <h2 style="color: #007BFF; text-align: center;">أحدث الفيديوهات</h2>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-    <iframe width="300" height="180" src="https://www.youtube.com/embed/DLHmGj_DVPs
-" frameborder="0" allowfullscreen></iframe>
-    <iframe width="300" height="180" src="https://www.youtube.com/embed/Cxj87v67AVM" frameborder="0" allowfullscreen></iframe>
-    <iframe width="300" height="180" src="https://www.youtube.com/embed/R_Tf8zQSlTY" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
