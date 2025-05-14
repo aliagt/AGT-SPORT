@@ -120,6 +120,32 @@
 
   <p style="font-size: 14px; color: #888;">© 2025 AGT SPORT - جميع الحقوق محفوظة</p>
 </footer>
+<!-- زر اتصل بنا -->
+<button onclick="toggleContact()" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; background-color: #00bfff; color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer;">
+  اتصل بنا
+</button>
+
+<!-- الفورم -->
+<div id="contactForm" style="display: none; position: fixed; bottom: 70px; left: 20px; background-color: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.2); width: 300px; z-index: 1000;">
+  <form action="https://formspree.io/f/xgvkpavn" method="POST">
+    <input type="text" name="name" placeholder="الاسم" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <textarea name="message" placeholder="اكتب رسالتك هنا..." required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
+    <button type="submit" style="background-color: #00bfff; color: white; border: none; padding: 10px 15px; border-radius: 5px;">إرسال</button>
+  </form>
+</div>
+
+<!-- سكريبت إظهار/إخفاء -->
+<script>
+  function toggleContact() {
+    var form = document.getElementById("contactForm");
+    if (form.style.display === "none") {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  }
+</script>
 
 <body>
   <header>
